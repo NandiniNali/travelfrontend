@@ -1,0 +1,490 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ffffff, #ffffff);
+  padding: 15px 20px;
+  color: white;
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+  color:#000;
+}
+
+.nav-links a,
+.nav-links span {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 150px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 10px 15px;
+}
+
+.dropdown-menu a:hover {
+  background: #008CBA;
+  color: white;
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.not-found-container {
+  text-align: center;
+}
+
+.not-found-image {
+  width: 300px;
+  height: auto;
+  margin-top: 20px; 
+}
+
+.home-background {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 65px;
+  padding-right: 5%;
+}
+
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* NAVBAR STYLES */
+.navbar1 {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-links a,
+.nav-links span {
+  padding: 10px 15px;
+  font-family: serif;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links span:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu1 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu1 li {
+  display: block;
+}
+
+.dropdown-menu1 a {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+}
+
+.dropdown-menu1 a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-menu1 {
+  display: block;
+}
+
+/* HOME SECTION */
+.home-background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/path/to/your/image.png'); /* Add your correct image path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end; /* Push content to right */
+  align-items: center;
+  padding-top: 65px;
+  padding-right: 5%;
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: left;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  margin-right: auto; /* Ensures it hugs the right */
+}
+
+/* ABOUT WRAPPER */
+.about-wrapper {
+  min-height: calc(100vh - 65px); /* Adjust for navbar height */
+  margin-top: 65px; /* Push content below fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* ABOUT PAGE CONTENT */
+.about-page-container {
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-background {
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 20px 20px;
+  }
+
+  .hero-text {
+    padding: 20px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+}
+.registration-wrapper {
+  min-height: calc(100vh - 65px);
+  margin-top: 65px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.registration-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.registration-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.registration-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registration-form h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  font-size: 14px;
+  background-color: #aeacac;
+  color: #fff;
+}
+
+.input-field::placeholder {
+  color: #ffffff;
+}
+
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #333;
+}
+
+.success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/*        LOGIN PAGE CSS        */
+/* ============================= */
+
+/* Wrapper to center content vertically & horizontally */
+/* LOGIN WRAPPER: absolutely fill below navbar and center contents */
+.login-wrapper {
+  position: absolute;
+  top: 65px;               /* height of your fixed navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Container holds image + form side by side */
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 900px;           /* Controls maximum width of the box */
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: auto;
+}
+
+/* Left image panel */
+.login-image {
+  flex: 1;
+  min-width: 300px;
+}
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right form panel */
+.login-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+.login-form h2 {
+  margin-bottom: 24px;
+  font-size: 1.75rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Input fields */
+.login-form .input-field {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f5f5f5;
+  color: #333;
+  transition: border-color 0.2s;
+}
+.login-form .input-field:focus {
+  outline: none;
+  border-color: green;
+  background: #fff;
+}
+
+/* Submit button */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background-color: green;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+.login-button:hover {
+  background-color: darkgreen;
+  transform: translateY(-1px);
+}
+
+/* Register link below the form */
+.register-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+.register-text a {
+  color: green;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.register-text a:hover {
+  color: darkgreen;
+}
+
+/* Responsive: stack panels vertically on small screens */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .login-image img {
+    height: 200px;
+  }
+  .login-form {
+    padding: 20px;
+  }
+}
+
+.contact-form{
+  margin-top:0px;
+  width: 350px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}

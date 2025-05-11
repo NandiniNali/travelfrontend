@@ -1,0 +1,99 @@
+/* Container for the profile page */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f4f7fc;  /* Light background for the page */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title of the profile section */
+.profile-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  animation: slideIn 1s ease-out;
+}
+
+/* Styling for the profile card */
+.profile-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  animation: cardAppear 1s ease-out;
+}
+
+/* Styling for each piece of profile information */
+.profile-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Strong text (for labels) */
+.profile-card strong {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Loading message styling */
+.loading-message {
+  text-align: center;
+  font-size: 20px;
+  color: #888;
+  margin-top: 50px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+
+/* Fade-in animation for the whole container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for the title */
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for profile card appearance */
+@keyframes cardAppear {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hover effect on the profile card items */
+.profile-card p:hover {
+  transform: translateX(5px);
+  color: #0073e6;
+}

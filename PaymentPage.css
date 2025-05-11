@@ -1,0 +1,46 @@
+/* PaymentPage.css */
+.payment-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.payment-form input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.payment-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.payment-form button:hover {
+  background-color: #218838;
+}
